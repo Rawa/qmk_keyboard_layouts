@@ -4,7 +4,7 @@ This repository contains keyboard layouts for DZ60 split keyboard and KbdFans MK
 
 ## Requirements
 
-To utilize the `install.sh` and `uninstall.sh` script you are required to have `stow` installed. You can also manually install the keyboards by manually adding them to your qmk_firmware directory
+To utilize the `install.sh` and `uninstall.sh` script you are required to have [stow](https://www.gnu.org/software/stow/) installed. You can also manually install the keyboards by manually copying over them to your qmk_firmware directory
 
 ## Install
 
