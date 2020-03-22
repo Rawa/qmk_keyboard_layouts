@@ -9,7 +9,3 @@ To utilize the `install.sh` and `uninstall.sh` script you are required to have [
 ## Install
 
     $ ./install.sh /path/to/qmk_firmware
-
-## Uninstall
-
-    $ ./uninstall.sh /path/to/qmk_firmware
