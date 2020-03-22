@@ -1,6 +1,6 @@
 # QMK Keymaps
 
-This repository contains keyboard layouts for DZ60 split keyboard and KbdFans MKII
+This repository contains my keyboard layouts for dz60 and KBD8x MK II
 
 ## Requirements
 
