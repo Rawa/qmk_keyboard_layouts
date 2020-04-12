@@ -17,6 +17,7 @@
 #define BL 0     // Base Layer
 #define FL 1     // Function Layer
 #define EL 2     // Easy access Layer
+#define GL 3     // Gaming Layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -48,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB ,        KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,      KC_P,      KC_LBRC,   KC_RBRC,
       LT(EL, KC_ESC), KC_A,      KC_S,      KC_D,      KC_F,      KC_G,      KC_H,      KC_J,      KC_K,      KC_L,      KC_SCLN,   KC_QUOT,   KC_NUHS,   KC_ENT,
       KC_LSFT,        KC_NUBS,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,   KC_RSFT,
-      KC_LCTL,        KC_LGUI,   KC_LALT,   KC_SPC,    MO(FL),    KC_SPC,    KC_RALT,   KC_RGUI,   KC_APP,    KC_RCTL),
+      KC_LCTL,        KC_LGUI,   KC_LALT,   KC_SPC,    MO(FL),    KC_BSPC,   KC_RALT,   KC_RGUI,   KC_APP,    KC_RCTL),
 
   /* Keymap FL: Function Layer
    *
@@ -70,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,   _______,     KC_PGUP,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
       _______,   KC_HOME,     KC_PGDOWN,  KC_END,       _______,   _______,   KC_LEFT,   KC_DOWN,   KC_UP,     KC_RIGHT,  _______,   _______,   _______,   _______,
       _______,   _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
-      _______,   _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______),
+      _______,   _______,     _______,    _______,      _______,   TG(GL),   _______,   _______,   _______,   _______),
 
   /* Keymap NL: Numpad Layer
   *
@@ -81,7 +82,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,   _______,   _______,   _______,   _______,   _______,   _______,    RALT(KC_7),  RALT(KC_0),  _______,           _______,         _______,   _______,
       _______,   _______,   _______,   _______,   _______,   _______,   LSFT(KC_7), LSFT(KC_8),  LSFT(KC_9),  RALT(KC_MINS),     _______,         _______,   _______,    _______,
       _______,   _______,   _______,   _______,   _______,   _______,   _______,    KC_NUBS,     RALT(KC_8),  RALT(KC_9),        LSFT(KC_NUBS),   _______,   _______,
-      _______,   _______,   _______,   _______,   _______,    _______,   _______,    _______,     _______,     _______)
+      _______,   _______,   _______,   _______,   _______,    _______,   _______,    _______,     _______,     _______),
 
+   [GL] = LAYOUT_60_iso_split(
+	//  1          2            3           4             5          6          7          8          9          10         11         12         13         14
+	    KC_I,      _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   TG(GL),
+      _______,   _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
+      KC_J,      _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
+      _______,   _______,     _______,    _______,      _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
+      _______,   _______,     _______,    _______,      KC_K,      TG(GL),    _______,   _______,   _______,   _______),
 };
 
